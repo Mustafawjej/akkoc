@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akkoç Köyü Sosyal Yardımlaşma ve Dayanışma Derneği</title>
+    <title>Akkoç Köyü Kültür ve Dayanışma Derneği</title>
+    <!-- Modern Yazı Tipi İthalatı -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Yenilenen Canlı ve Akıcı Renk Paleti */
+        /* Yenilenen Canlı ve Akıcı Renk Paleti (Logo Uyumlu) */
         :root {
-            --logo-mavi-koyu: #1e4620;
-            --logo-mavi: #2a6f97;
-            --logo-mavi-acik: #014f86;
             --logo-yesil: #2d6a4f;
+            --logo-mavi: #2a6f97;
+            --logo-mavi-koyu: #014f86;
             --logo-altin: #d4af37;
-            --logo-altin-hover: #aa8c2c;
-            --arka-plan: #f0f4f8;
+            --logo-altin-hover: #b89228;
+            --arka-plan: #f4f7f6;
             --yazi-renk: #1e293b;
             --beyaz: #ffffff;
         }
@@ -26,7 +27,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
@@ -35,15 +36,15 @@
             overflow-x: hidden;
         }
 
-        /* Üst Menü */
+        /* Navigasyon Barı */
         header {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 4px 30px rgba(0,0,0,0.05);
-            border-bottom: 2px solid var(--logo-altin);
+            border-bottom: 3px solid var(--logo-altin);
         }
 
         .navbar {
@@ -63,8 +64,8 @@
         }
 
         .logo-img {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
         }
 
@@ -77,7 +78,7 @@
 
         .logo-text p {
             font-size: 11px;
-            color: var(--logo-mavi-acik);
+            color: var(--logo-mavi-koyu);
             font-weight: 600;
             letter-spacing: 0.5px;
         }
@@ -93,7 +94,7 @@
             color: var(--yazi-renk);
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             transition: color 0.3s ease;
             cursor: pointer;
         }
@@ -102,19 +103,19 @@
             color: var(--logo-yesil);
         }
 
-        /* Butonlar */
+        /* Buton Stilleri */
         .btn-sari {
-            background-color: var(--logo-altin);
+            background: linear-gradient(135deg, var(--logo-altin), #e5bd47);
             color: var(--beyaz) !important;
-            padding: 10px 20px;
+            padding: 10px 22px;
             border-radius: 50px;
             font-weight: 700 !important;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
             transition: all 0.3s ease !important;
         }
 
         .btn-sari:hover {
-            background-color: var(--logo-altin-hover);
+            background: var(--logo-altin-hover);
             transform: translateY(-2px);
         }
 
@@ -124,6 +125,8 @@
             color: var(--logo-mavi) !important;
             padding: 8px 18px;
             border-radius: 50px;
+            font-weight: 700 !important;
+            transition: all 0.3s ease !important;
         }
 
         .btn-oturum:hover {
@@ -131,11 +134,11 @@
             color: white !important;
         }
 
-        /* Giriş Ekranı (Hero) */
+        /* Giriş (Hero) Alanı */
         .hero {
             position: relative;
-            background: linear-gradient(rgba(30, 70, 32, 0.5), rgba(1, 79, 134, 0.45)), url('akkoc.jpg') no-repeat center center/cover;
-            height: 70vh;
+            background: linear-gradient(rgba(45, 106, 79, 0.55), rgba(1, 79, 134, 0.5)), url('akkoc.jpg') no-repeat center center/cover;
+            height: 65vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -145,32 +148,32 @@
         }
 
         .hero-content {
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.15);
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.12);
             padding: 40px;
             border-radius: 24px;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
         }
 
         .hero h2 {
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 800;
             margin-bottom: 15px;
-            color: #fff;
+            letter-spacing: -0.5px;
         }
 
-        /* Ortak Alanlar */
+        /* Ortak Bölümler */
         section {
-            padding: 70px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 30px;
+            font-size: 28px;
             color: var(--logo-yesil);
             margin-bottom: 40px;
             font-weight: 700;
@@ -195,20 +198,20 @@
 
         .duyuru-kart {
             background: var(--beyaz);
-            border-left: 5px solid var(--logo-mavi);
+            border-top: 4px solid var(--logo-mavi);
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
             transition: all 0.3s ease;
         }
 
         .duyuru-kart:hover {
-            transform: translateY(-4px);
-            border-left-color: var(--logo-altin);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-top-color: var(--logo-altin);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
-        /* Fotoğraflar Sayfası */
+        /* Fotoğraflar Sayfası (Galeri) */
         .galeri-ust {
             display: flex;
             justify-content: space-between;
@@ -225,9 +228,11 @@
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.3s;
+            transition: transform 0.2s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+
+        .btn-yukle-label:hover { transform: scale(1.03); }
 
         .galeri-grid {
             display: grid;
@@ -240,7 +245,7 @@
             border-radius: 16px;
             overflow: hidden;
             height: 220px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
         }
 
         .galeri-item img {
@@ -250,9 +255,7 @@
             transition: transform 0.4s;
         }
 
-        .galeri-item:hover img {
-            transform: scale(1.08);
-        }
+        .galeri-item:hover img { transform: scale(1.06); }
 
         /* Kadro */
         .yonetim-container {
@@ -267,26 +270,26 @@
             padding: 30px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
             max-width: 300px;
             width: 100%;
-            border-bottom: 5px solid var(--logo-altin);
+            border-top: 5px solid var(--logo-yesil);
         }
 
         .profil-avatar {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             background: #f1f5f9;
             border-radius: 50%;
             margin: 0 auto 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 45px;
-            border: 3px solid var(--logo-yesil);
+            font-size: 40px;
+            border: 3px solid var(--logo-altin);
         }
 
-        /* İletişim & Harita */
+        /* İletişim & Konum */
         .iletisim-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -294,18 +297,18 @@
             background: var(--beyaz);
             padding: 40px;
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
         }
 
         .iletisim-bilgileri h4 {
-            font-size: 22px;
+            font-size: 20px;
             color: var(--logo-yesil);
             margin-bottom: 20px;
         }
 
         .iletisim-satir {
             margin-bottom: 15px;
-            font-size: 16px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -320,7 +323,10 @@
             text-decoration: none;
             font-weight: 600;
             margin-top: 15px;
+            transition: background 0.2s;
         }
+
+        .btn-harita:hover { background-color: var(--logo-mavi-koyu); }
 
         .harita-onizleme {
             background: linear-gradient(135deg, #e0f2fe, #dcfce7);
@@ -329,18 +335,18 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             border: 2px dashed var(--logo-mavi);
         }
 
-        /* Yönetici Paneli Alanı */
+        /* Yönetici Paneli Görünümü */
         .admin-section {
-            background: #1e293b;
+            background: #0f172a;
             color: white;
             border-radius: 24px;
             padding: 40px;
             margin-top: 40px;
-            display: none; /* Sadece admin giriş yapınca açılacak */
+            display: none;
         }
 
         .admin-grid {
@@ -349,38 +355,25 @@
             gap: 30px;
         }
 
-        @media (max-width: 768px) {
-            .admin-grid { grid-template-columns: 1fr; }
-            .iletisim-wrapper { grid-template-columns: 1fr; }
-            .navbar { flex-direction: column; gap: 15px; }
-        }
-
         .admin-liste {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.06);
             padding: 20px;
             border-radius: 12px;
-            max-height: 300px;
+            max-height: 280px;
             overflow-y: auto;
         }
 
-        .admin-user-item {
+        .admin-item {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .admin-foto-item {
-            display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .admin-foto-item img {
-            width: 50px;
-            height: 50px;
+        .admin-item img {
+            width: 45px;
+            height: 45px;
             object-fit: cover;
             border-radius: 6px;
         }
@@ -389,7 +382,7 @@
             background: #ef4444;
             color: white;
             border: none;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 6px;
             cursor: pointer;
             font-weight: 600;
@@ -397,12 +390,12 @@
 
         .btn-sil:hover { background: #dc2626; }
 
-        /* Gelişmiş Kimlik Doğrulama Modalı (Popup) */
+        /* Güvenlikli Popup Modalı */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(6px);
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(5px);
             display: flex; justify-content: center; align-items: center;
             z-index: 1000; opacity: 0; visibility: hidden;
             transition: all 0.3s ease;
@@ -413,13 +406,13 @@
         .modal-pencere {
             background: var(--beyaz);
             padding: 35px;
-            border-radius: 20px;
-            max-width: 420px;
+            border-radius: 24px;
+            max-width: 400px;
             width: 100%;
             position: relative;
             transform: scale(0.9);
             transition: all 0.3s ease;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
             text-align: center;
         }
 
@@ -431,11 +424,11 @@
         }
 
         .form-grup {
-            margin-bottom: 18px; text-align: left;
+            margin-bottom: 16px; text-align: left;
         }
 
         .form-grup label {
-            display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;
+            display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;
         }
 
         .form-grup input {
@@ -443,36 +436,52 @@
             border-radius: 10px; font-size: 15px;
         }
 
-        .form-grup input:focus {
-            border-color: var(--logo-mavi); outline: none;
+        .form-grup input:focus { border-color: var(--logo-mavi); outline: none; }
+
+        .btn-gonder {
+            width: 100%;
+            background-color: var(--logo-yesil);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
         }
 
-        /* Durum Katmanları (Giriş/Kayıt/Doğrulama Arası Geçiş) */
         .modal-katman { display: none; }
         .modal-katman.active { display: block; }
 
-        .dogrulama-ipucu {
+        .dogrulama-kutu {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            padding: 10px;
-            border-radius: 8px;
+            padding: 12px;
+            border-radius: 10px;
             font-size: 13px;
             color: var(--logo-yesil);
             margin-bottom: 15px;
             font-weight: 600;
         }
 
-        /* Footer */
+        /* Sayfa Sonu */
         footer {
-            background: #1e293b; color: white; text-align: center;
+            background: #0f172a; color: white; text-align: center;
             padding: 30px; margin-top: 60px; font-size: 14px;
             border-top: 4px solid var(--logo-altin);
+        }
+
+        @media (max-width: 768px) {
+            .admin-grid, .iletisim-wrapper { grid-template-columns: 1fr; }
+            .navbar { flex-direction: column; gap: 15px; }
+            .hero h2 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigasyon -->
+    <!-- Üst Menü -->
     <header>
         <div class="navbar">
             <a href="#anasayfa" class="logo-alani">
@@ -492,17 +501,17 @@
                     <li id="adminMenuBtn" style="display: none;"><a href="#adminPaneli" style="color: var(--logo-altin);">⚙️ Yönetim Paneli</a></li>
                     <li id="uyeGirisAlani"><a onclick="modalAc('giris')" class="btn-oturum">Giriş Yap</a></li>
                     <li id="uyeKayitAlani"><a onclick="modalAc('kayit')" class="btn-sari">Kayıt Ol</a></li>
-                    <li id="uyeProfilAlani" style="display: none;"><span id="kullaniciGirisYazi" style="font-weight:700; margin-right:10px;"></span><a onclick="oturumuKapat()" class="btn-oturum">Çıkış</a></li>
+                    <li id="uyeProfilAlani" style="display: none;"><span id="kullaniciGirisYazi" style="font-weight:700; color:var(--logo-yesil); margin-right:10px;"></span><a onclick="oturumuKapat()" class="btn-oturum">Çıkış Yap</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Bölümü -->
+    <!-- Giriş Alanı -->
     <section class="hero" id="anasayfa">
         <div class="hero-content">
-            <h2>Akkoç Köyü Kültür ve Dayanışma Platformu</h2>
-            <p>Tokat Erbaa Akkoç Köyü Sosyal Yardımlaşma, Dayanışma, Kalkındırma ve Kültür Derneği resmi topluluk sayfasına hoş geldiniz.</p>
+            <h2>Akkoç Köyü Topluluk ve Dayanışma Portalı</h2>
+            <p>Tokat Erbaa Akkoç Köü Sosyal Yardımlaşma, Dayanışma, Kalkındırma ve Kültür Derneği platformuna hoş geldiniz.</p>
         </div>
     </section>
 
@@ -512,31 +521,30 @@
         <div class="duyuru-grid">
             <div class="duyuru-kart">
                 <span style="font-size:12px; color:var(--logo-mavi); font-weight:700;">28 Mayıs 2026</span>
-                <h4 style="margin: 8px 0; color:var(--logo-yesil);">Dernek Web Sitemiz Yayında!</h4>
-                <p>Köylülerimizi ve gurbetteki tüm hemşerilerimizi tek bir çatıda toplamak amacıyla dijital platformumuz hizmete açılmıştır.</p>
+                <h4 style="margin: 8px 0; color:var(--logo-yesil);">Yeni Dernek Sitemiz Aktif Edildi</h4>
+                <p>Köyümüzün kültürünü yaşatmak ve gurbetteki köylülerimizle bağı koparmamak için hazırlanan sitemiz yayına alınmıştır.</p>
             </div>
             <div class="duyuru-kart">
-                <span style="font-size:12px; color:var(--logo-mavi); font-weight:700;">25 Mayıs 2026</span>
-                <h4 style="margin: 8px 0; color:var(--logo-yesil);">Eğitim ve Burs Başvuruları</h4>
-                <p>Derneğimiz tarafından Akkoç köyü nüfusuna kayıtlı üniversite öğrencilerine sağlanacak burs başvuruları başlamıştır.</p>
+                <span style="font-size:12px; color:var(--logo-mavi); font-weight:700;">24 Mayıs 2026</span>
+                <h4 style="margin: 8px 0; color:var(--logo-yesil);">Üye Kayıtları Başladı</h4>
+                <p>Tüm köylülerimiz yukarıda bulunan "Kayıt Ol" butonu üzerinden sisteme kayıt olarak fotoğraf paylaşımında bulunabilir.</p>
             </div>
         </div>
     </section>
 
-    <!-- Fotoğraflar Sayfası -->
+    <!-- Fotoğraflar -->
     <section id="galeri" style="background-color: var(--beyaz); max-width: 100%; width: 100%;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="galeri-ust">
                 <h3 class="section-title" style="margin-bottom: 0;">Köyümüzün Fotoğrafları</h3>
                 <div>
                     <input type="file" id="foto-input" style="display: none;" onchange="yeniFotoYukle(event)">
-                    <label for="foto-input" class="btn-yukle-label" id="yukleButonEtiket">
+                    <label for="foto-input" class="btn-yukle-label" id="yukleButonEtiket" style="display: none;">
                         📸 Fotoğraf Ekle
                     </label>
                 </div>
             </div>
             <div class="galeri-grid" id="galeriKonteyner">
-                <!-- Sabit Ana Görsel -->
                 <div class="galeri-item">
                     <img src="akkoc.jpg" alt="Akkoç Köyü">
                 </div>
@@ -550,7 +558,7 @@
         <div class="yonetim-container">
             <div class="yonetim-kart">
                 <div class="profil-avatar">👤</div>
-                <h4 style="color: var(--yazi-renk);">Veysel Şahin</h4>
+                <h4>Veysel Şahin</h4>
                 <p>Köy Muhtarı</p>
             </div>
         </div>
@@ -561,54 +569,50 @@
         <h3 class="section-title">İletişim & Konum</h3>
         <div class="iletisim-wrapper">
             <div class="iletisim-bilgileri">
-                <h4>Dernek & Muhtarlık İletişim</h4>
-                <div class="iletisim-satir">📞 <strong>Muhtar Telefon:</strong> 0535 012 75 60</div>
+                <h4>Muhtarlık & Dernek İletişim Bilgileri</h4>
+                <div class="iletisim-satir">📞 <strong>Muhtar Tel:</strong> 0535 012 75 60</div>
                 <div class="iletisim-satir">✉️ <strong>E-Posta:</strong> info@akkockoyu.org</div>
                 <div class="iletisim-satir">📍 <strong>Konum:</strong> Akkoç Köyü, Erbaa / Tokat</div>
-                <a href="https://maps.app.goo.gl/vXTGegFzeVXvPyVYA" target="_blank" class="btn-harita">🗺️ Google Haritalarda Aç</a>
+                <a href="https://maps.app.goo.gl/vXTGegFzeVXvPyVYA" target="_blank" class="btn-harita">🗺️ Google Haritalarda Gör</a>
             </div>
             <div class="harita-onizleme">
                 <div>
                     <img src="Gemini_Generated_Image_ttj72ttj72ttj72t.png" style="width:70px; margin-bottom:10px;" alt="Logo">
                     <p style="font-weight: 700; color: var(--logo-yesil);">Tokat Erbaa Akkoç Köyü</p>
-                    <p style="font-size: 13px; margin-top: 5px;">Harita rotası ve navigasyon bilgisi için yandaki butona tıklayabilirsiniz.</p>
+                    <p style="font-size: 13px; opacity: 0.8; margin-top: 5px;">Doğrudan canlı harita navigasyonu için yandaki butonu kullanabilirsiniz.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gelişmiş Canlı Yönetici Paneli -->
+    <!-- CANLI YÖNETİCİ PANELİ (Sadece Admin Girişinde Açılır) -->
     <section id="adminPaneli" class="admin-section">
-        <h3 style="color: var(--logo-altin); margin-bottom: 25px; text-align: center;">⚙️ Akkoç Köyü Yönetim Paneli (Admin)</h3>
+        <h3 style="color: var(--logo-altin); margin-bottom: 25px; text-align: center;">⚙️ Akkoç Derneği Yönetim Paneli</h3>
         <div class="admin-grid">
             <div>
-                <h4 style="margin-bottom: 15px; color: #94a3b8;">👥 Kayıtlı Kullanıcılar</h4>
-                <div class="admin-liste" id="adminUserList">
-                    <!-- Dinamik Kullanıcılar -->
-                </div>
+                <h4 style="margin-bottom: 12px; color: #94a3b8;">👥 Kayıtlı Platform Üyeleri</h4>
+                <div class="admin-liste" id="adminUserList"></div>
             </div>
             <div>
-                <h4 style="margin-bottom: 15px; color: #94a3b8;">🖼️ Eklenen Fotoğrafları Yönet</h4>
-                <div class="admin-liste" id="adminPhotoList">
-                    <!-- Dinamik Fotoğraflar -->
-                </div>
+                <h4 style="margin-bottom: 12px; color: #94a3b8;">🖼️ Eklenen Fotoğrafları Yönet (Silme)</h4>
+                <div class="admin-liste" id="adminPhotoList"></div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Tokat Erbaa Akkoç Köyü Derneği Sürüm 2.0. Tüm Hakları Saklıdır.</p>
+        <p>&copy; 2026 Tokat Erbaa Akkoç Köyü Derneği Platformu. Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <!-- Kimlik Doğrulama PopUp Sistemi -->
+    <!-- POPUP GÜVENLİK SİSTEMİ -->
     <div class="modal-overlay" id="authModal">
         <div class="modal-pencere">
             <span class="modal-kapat" onclick="modalKapat()">&times;</span>
-            <img src="Gemini_Generated_Image_ttj72ttj72ttj72t.png" style="width: 60px; margin-bottom: 15px;" alt="Logo">
+            <img src="Gemini_Generated_Image_ttj72ttj72ttj72t.png" style="width: 55px; margin-bottom: 15px;" alt="Logo">
             
-            <!-- KATMAN 1: GİRİŞ YAP -->
+            <!-- KATMAN 1: GİRİŞ FORMU -->
             <div id="katmanGiris" class="modal-katman">
-                <h3>Giriş Yap</h3>
+                <h3>Üye Girişi</h3>
                 <form onsubmit="aksiyonGiris(event)">
                     <div class="form-grup">
                         <label>E-Posta Adresi</label>
@@ -618,17 +622,17 @@
                         <label>Şifre</label>
                         <input type="password" id="girisSifre" required placeholder="••••••••">
                     </div>
-                    <button type="submit" class="btn-gonder">Giriş Yap ve Doğrula</button>
+                    <button type="submit" class="btn-gonder">Giriş Yap ve Kod İste</button>
                 </form>
             </div>
 
-            <!-- KATMAN 2: KAYIT OL -->
+            <!-- KATMAN 2: KAYIT FORMU -->
             <div id="katmanKayit" class="modal-katman">
-                <h3>Kayıt Ol</h3>
+                <h3>Yeni Üye Kaydı</h3>
                 <form onsubmit="aksiyonKayit(event)">
                     <div class="form-grup">
                         <label>Adınız Soyadınız</label>
-                        <input type="text" id="kayitAd" required placeholder="Mustafa Şimşek">
+                        <input type="text" id="kayitAd" required placeholder="Ahmet Yılmaz">
                     </div>
                     <div class="form-grup">
                         <label>E-Posta Adresi</label>
@@ -638,50 +642,43 @@
                         <label>Şifre</label>
                         <input type="password" id="kayitSifre" required placeholder="••••••••">
                     </div>
-                    <button type="submit" class="btn-gonder">Onay Kodu Gönder</button>
+                    <button type="submit" class="btn-gonder">Doğrulama Kodu Al</button>
                 </form>
             </div>
 
-            <!-- KATMAN 3: E-POSTA KOD DOĞRULAMA -->
+            <!-- KATMAN 3: KOD DOĞRULAMA (HEM GİRİŞ HEM KAYIT İÇİN ORTAK) -->
             <div id="katmanDogrulama" class="modal-katman">
-                <h3>E-Posta Doğrulama</h3>
-                <p style="font-size: 13px; color: #64748b; margin-bottom: 15px;">Lütfen e-postanıza gönderilen 4 haneli kodu giriniz.</p>
-                <div class="dogrulama-ipucu" id="kodIpucuKutusu"></div>
+                <h3>Güvenlik Doğrulaması</h3>
+                <p style="font-size: 13px; color: #64748b; margin-bottom: 15px;">Güvenliğiniz için e-postanıza gönderilen 4 haneli kodu girin:</p>
+                <div class="dogrulama-kutu" id="kodIpucuKutusu"></div>
                 <form onsubmit="aksiyonDogrula(event)">
                     <div class="form-grup">
-                        <label>Doğrulama Kodu</label>
-                        <input type="text" id="dogrulamaKoduGiris" maxlength="4" required style="text-align: center; font-size: 24px; letter-spacing: 5px;">
+                        <label>4 Haneli Onay Kodu</label>
+                        <input type="text" id="dogrulamaKoduGiris" maxlength="4" required style="text-align: center; font-size: 24px; font-weight:700; letter-spacing: 6px;">
                     </div>
-                    <button type="submit" class="btn-gonder">Kodu Onayla ve Tamamla</button>
+                    <button type="submit" class="btn-gonder">Kodu Doğrula ve Oturumu Aç</button>
                 </form>
             </div>
 
         </div>
     </div>
 
-    <!-- Sistem JavaScript Motoru -->
+    <!-- SİSTEM JAVASCRIPT ÇEKİRDEĞİ -->
     <script>
-        // Bellek (Database) Ayarları
-        if(!localStorage.getItem('akkoc_uyeler')) {
-            localStorage.setItem('akkoc_uyeler', JSON.stringify([]));
-        }
-        if(!localStorage.getItem('akkoc_fotolar')) {
-            localStorage.setItem('akkoc_fotolar', JSON.stringify([]));
-        }
+        // LocalStorage Veritabanı İlklendirme
+        if(!localStorage.getItem('akkoc_uyeler')) localStorage.setItem('akkoc_uyeler', JSON.stringify([]));
+        if(!localStorage.getItem('akkoc_fotolar')) localStorage.setItem('akkoc_fotolar', JSON.stringify([]));
 
-        // Global Durum Yönetimi
         let aktifKullanici = JSON.parse(sessionStorage.getItem('akkoc_oturum')) || null;
         let uretilenKod = "";
         let geciciUyeVerisi = null;
-        let dogrulamaModu = ""; // 'giris' veya 'kayit'
+        let dogrulamaModu = ""; 
 
-        // Sayfa İlk Yüklendiğinde Çalışacak Fonksiyonlar
         window.onload = function() {
             oturumKontrolArayuz();
             galeriYenile();
         };
 
-        // Oturum Durumuna Göre Arayüzü Güncelleme
         function oturumKontrolArayuz() {
             const girisBtn = document.getElementById('uyeGirisAlani');
             const kayitBtn = document.getElementById('uyeKayitAlani');
@@ -698,7 +695,7 @@
                 yazi.innerText = aktifKullanici.ad;
                 yukleEtiket.style.display = "inline-flex";
 
-                // Admin kontrolü
+                // Admin Giriş Şartı Kontrolü
                 if(aktifKullanici.eposta === "mustafasimsek603460@gmail.com") {
                     adminMenu.style.display = "block";
                     adminPanelSec.style.display = "block";
@@ -713,32 +710,20 @@
                 profilAlani.style.display = "none";
                 adminMenu.style.display = "none";
                 adminPanelSec.style.display = "none";
-                yukleEtiket.style.display = "none"; // Giriş yapmayan foto yükleyemez
+                yukleEtiket.style.display = "none";
             }
         }
 
-        // Modal Açma/Kapatma
         function modalAc(tip) {
             document.getElementById('authModal').classList.add('active');
             document.querySelectorAll('.modal-katman').forEach(k => k.classList.remove('active'));
-            
-            if(tip === 'giris') {
-                document.getElementById('katmanGiris').classList.add('active');
-            } else if(tip === 'kayit') {
-                document.getElementById('katmanKayit').classList.add('active');
-            }
+            if(tip === 'giris') document.getElementById('katmanGiris').classList.add('active');
+            if(tip === 'kayit') document.getElementById('katmanKayit').classList.add('active');
         }
 
-        function modalKapat() {
-            document.getElementById('authModal').classList.remove('active');
-        }
+        function modalKapat() { document.getElementById('authModal').classList.remove('active'); }
 
-        // Kod Üretim Motoru (Simülasyon için)
-        function kodUret() {
-            return Math.floor(1000 + Math.random() * 9000).toString();
-        }
-
-        // Aksiyon: Kayıt Ol Formu Gönderildiğinde
+        // Aksiyon: Kayıt İstendiğinde
         function aksiyonKayit(e) {
             e.preventDefault();
             const ad = document.getElementById('kayitAd').value;
@@ -747,57 +732,52 @@
 
             let uyeler = JSON.parse(localStorage.getItem('akkoc_uyeler'));
             if(uyeler.some(u => u.eposta === eposta) || eposta === "mustafasimsek603460@gmail.com") {
-                alert("Bu e-posta adresi zaten kayıtlı!");
+                alert("Bu e-posta adresi sistemde zaten mevcut!");
                 return;
             }
 
-            // Doğrulama katmanına geçiş
-            uretilenKod = kodUret();
+            uretilenKod = Math.floor(1000 + Math.random() * 9000).toString();
             dogrulamaModu = 'kayit';
             geciciUyeVerisi = { ad, eposta, sifre };
 
             document.getElementById('katmanKayit').classList.remove('active');
             document.getElementById('katmanDogrulama').classList.add('active');
-            document.getElementById('kodIpucuKutusu').innerText = `💬 [Simülasyon] Akkoç Derneği Doğrulama Kodunuz: ${uretilenKod}`;
+            document.getElementById('kodIpucuKutusu').innerText = `✉️ Akkoç Derneği E-Posta Kayıt Onay Kodunuz: ${uretilenKod}`;
         }
 
-        // Aksiyon: Giriş Yap Formu Gönderildiğinde
+        // Aksiyon: Giriş İstendiğinde
         function aksiyonGiris(e) {
             e.preventDefault();
             const eposta = document.getElementById('girisEposta').value;
             const sifre = document.getElementById('girisSifre').value;
 
-            // Sabit Admin Hesabı Kontrolü
             if(eposta === "mustafasimsek603460@gmail.com" && sifre === "Mustafa201099") {
-                geciciUyeVerisi = { ad: "Sistem Yöneticisi", eposta: eposta };
+                geciciUyeVerisi = { ad: "Kurucu Yönetici", eposta: eposta };
             } else {
-                // Normal Üye Kontrolü
                 let uyeler = JSON.parse(localStorage.getItem('akkoc_uyeler'));
                 let bulunan = uyeler.find(u => u.eposta === eposta && u.sifre === sifre);
-
                 if(!bulunan) {
-                    alert("E-posta veya şifre hatalı!");
+                    alert("E-posta adresi veya şifreniz hatalı!");
                     return;
                 }
                 geciciUyeVerisi = bulunan;
             }
 
-            // Girişte de kod doğrulaması istendiği için doğrulama katmanına yolluyoruz
-            uretilenKod = kodUret();
+            uretilenKod = Math.floor(1000 + Math.random() * 9000).toString();
             dogrulamaModu = 'giris';
 
             document.getElementById('katmanGiris').classList.remove('active');
             document.getElementById('katmanDogrulama').classList.add('active');
-            document.getElementById('kodIpucuKutusu').innerText = `💬 [Simülasyon] Giriş Onay Kodunuz: ${uretilenKod}`;
+            document.getElementById('kodIpucuKutusu').innerText = `✉️ Akkoç Giriş Güvenlik Doğrulama Kodunuz: ${uretilenKod}`;
         }
 
-        // Aksiyon: Kod Girişi Yapılıp Onaylandığında
+        // Hem Giriş hem Kayıtta Ortak Kod Doğrulama Tetikleyicisi
         function aksiyonDogrula(e) {
             e.preventDefault();
             const girilenKod = document.getElementById('dogrulamaKoduGiris').value;
 
             if(girilenKod !== uretilenKod) {
-                alert("Girdiğiniz doğrulama kodu hatalı!");
+                alert("Girdiğiniz doğrulama kodu uyuşmuyor!");
                 return;
             }
 
@@ -806,10 +786,10 @@
                 uyeler.push(geciciUyeVerisi);
                 localStorage.setItem('akkoc_uyeler', JSON.stringify(uyeler));
                 aktifKullanici = geciciUyeVerisi;
-                alert("Hesabınız başarıyla doğrulandı ve oluşturuldu!");
+                alert("E-postanız başarıyla doğrulandı. Kayıt tamamlandı!");
             } else if(dogrulamaModu === 'giris') {
                 aktifKullanici = geciciUyeVerisi;
-                alert("Giriş başarılı! Hoş geldiniz.");
+                alert("Giriş kod doğrulaması başarılı!");
             }
 
             sessionStorage.setItem('akkoc_oturum', JSON.stringify(aktifKullanici));
@@ -821,11 +801,10 @@
         function oturumuKapat() {
             sessionStorage.removeItem('akkoc_oturum');
             aktifKullanici = null;
-            oturumKontrolArayuz();
             window.location.reload();
         }
 
-        // Dinamik Fotoğraf Yükleme Sistemi (Base64 Teknolojisi)
+        // Canlı Fotoğraf Ekleme Mekanizması
         function yeniFotoYukle(event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -836,60 +815,53 @@
                 fotolar.push({
                     id: Date.now(),
                     src: e.target.result,
-                    yukleyen: aktifKullanici ? aktifKullanici.ad : "Üye"
+                    yukleyen: aktifKullanici ? aktifKullanici.ad : "Anonim"
                 });
                 localStorage.setItem('akkoc_fotolar', JSON.stringify(fotolar));
                 galeriYenile();
-                if(aktifKullanici && aktifKullanici.eposta === "mustafasimsek603460@gmail.com") {
-                    adminPanelListele();
-                }
-                alert("Fotoğrafınız köy galerisine başarıyla eklendi!");
+                if(aktifKullanici && aktifKullanici.eposta === "mustafasimsek603460@gmail.com") adminPanelListele();
+                alert("Fotoğraf albüme eklendi!");
             };
             reader.readAsDataURL(file);
         }
 
-        // Galeriyi Ekrana Basma
         function galeriYenile() {
             const konteyner = document.getElementById('galeriKonteyner');
-            // İlk sabit fotoğrafı koru, sonradan eklenenleri temizle listele
             konteyner.innerHTML = `<div class="galeri-item"><img src="akkoc.jpg" alt="Akkoç Köyü"></div>`;
-            
             let fotolar = JSON.parse(localStorage.getItem('akkoc_fotolar'));
             fotolar.forEach(f => {
                 let item = document.createElement('div');
                 item.className = 'galeri-item';
-                item.innerHTML = `<img src="${f.src}" alt="Köy Fotoğrafı">`;
+                item.innerHTML = `<img src="${f.src}">`;
                 konteyner.appendChild(item);
             });
         }
 
-        // Admin Paneli İçerik Listeleme Motoru
+        // Admin Kontrol Ekranı Veri Listeleme Motoru
         function adminPanelListele() {
             const userListDiv = document.getElementById('adminUserList');
             const photoListDiv = document.getElementById('adminPhotoList');
 
-            // Kullanıcıları Listele
             let uyeler = JSON.parse(localStorage.getItem('akkoc_uyeler'));
-            userListDiv.innerHTML = uyeler.length === 0 ? "<p style='color:#94a3b8; font-size:14px;'>Henüz kayıtlı üye yok.</p>" : "";
-            uyeler.forEach((u, index) => {
+            userListDiv.innerHTML = uyeler.length === 0 ? "<p style='color:#64748b; font-size:13px;'>Sisteme henüz üye kaydı yapılmadı.</p>" : "";
+            uyeler.forEach(u => {
                 userListDiv.innerHTML += `
-                    <div class="admin-user-item">
-                        <span><strong>${u.ad}</strong> (${u.eposta})</span>
-                        <span style="color:var(--logo-altin); font-size:12px;">Normal Üye</span>
+                    <div class="admin-item">
+                        <span>👤 <strong>${u.ad}</strong> (${u.eposta})</span>
+                        <span style="color:var(--logo-altin); font-size:12px; font-weight:700;">ONAYLI ÜYE</span>
                     </div>
                 `;
             });
 
-            // Fotoğrafları Listele (Silme Butonlu)
             let fotolar = JSON.parse(localStorage.getItem('akkoc_fotolar'));
-            photoListDiv.innerHTML = fotolar.length === 0 ? "<p style='color:#94a3b8; font-size:14px;'>Üyeler tarafından yüklenen fotoğraf yok.</p>" : "";
+            photoListDiv.innerHTML = fotolar.length === 0 ? "<p style='color:#64748b; font-size:13px;'>Üyeler tarafından henüz hiç fotoğraf yüklenmedi.</p>" : "";
             fotolar.forEach(f => {
                 let div = document.createElement('div');
-                div.className = 'admin-foto-item';
+                div.className = 'admin-item';
                 div.innerHTML = `
-                    <div style="display:flex; align-items:center; gap:10px;">
+                    <div style="display:flex; align-items:center; gap:12px;">
                         <img src="${f.src}">
-                        <span style="font-size:13px; color:#cbd5e1;">Yükleyen: ${f.yukleyen}</span>
+                        <span style="font-size:13px; color:#94a3b8;">Paylaşan: ${f.yukleyen}</span>
                     </div>
                     <button class="btn-sil" onclick="fotoSil(${f.id})">Sil</button>
                 `;
@@ -897,9 +869,8 @@
             });
         }
 
-        // Admin: Fotoğraf Silme Fonksiyonu
         function fotoSil(id) {
-            if(confirm("Bu fotoğrafı köy galerisinden tamamen silmek istediğinize emin misiniz?")) {
+            if(confirm("Seçilen fotoğrafı köy albümünden kalıcı olarak silmek istiyor musunuz?")) {
                 let fotolar = JSON.parse(localStorage.getItem('akkoc_fotolar'));
                 fotolar = fotolar.filter(f => f.id !== id);
                 localStorage.setItem('akkoc_fotolar', JSON.stringify(fotolar));
