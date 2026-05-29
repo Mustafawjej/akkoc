@@ -42,9 +42,9 @@
         /* Resetleme ve Genel Ayarlar */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         html { scroll-behavior: smooth; font-size: 15px; }
-        body { background-color: var(--arkaplan-soft); color: var(--yazi-dark); overflow-x: hidden; }
+        body { background-color: var(--arkaplan-soft); color: var(--yazi-dark); overflow-x: hidden; line-height: 1.6; }
         
-        /* Özel Kaydırma Çubuğu (Scrollbar) Tasarımı */
+        /* Özel Kaydırma Çubuğu Tasarımı */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
         ::-webkit-scrollbar-thumb { background: var(--yesil-secondary); border-radius: 5px; }
@@ -92,8 +92,7 @@
         .nav-menu a:hover::after { width: 100%; }
         .nav-menu a:hover { color: var(--yesil-light); }
 
-        /* Buton Grubu */
-        .auth-cluster { display: flex; align-items: center; gap: 15px; }
+        .auth-cluster { display: flex; align-items: center; gap: 15px; list-style: none; }
         .btn-regal {
             background: linear-gradient(135deg, var(--altin-regal), #ebd073); color: var(--pure-white) !important;
             padding: 11px 26px; border-radius: 50px; font-weight: 700 !important; border: none; cursor: pointer;
@@ -109,7 +108,7 @@
 
         .profile-badge {
             display: flex; align-items: center; gap: 12px; background: #f1f5f9;
-            padding: 8px 20px; border-radius: 40px; border: 1px solid var(--border-renk);
+            padding: 8px 20px; border-radius: 40px; border: 1px solid #cbd5e1;
         }
 
         /* ==========================================================================
@@ -127,7 +126,6 @@
         .hero-glass-box h2 { font-size: 46px; font-weight: 900; margin-bottom: 18px; letter-spacing: -1px; }
         .hero-glass-box p { font-size: 20px; color: #f1f5f9; font-weight: 300; }
 
-        /* Veritabanı Sayaç Çubuğu */
         .metrics-grid-bar {
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
             max-width: 1400px; margin: -60px auto 0; padding: 0 24px; position: relative; z-index: 10;
@@ -142,7 +140,7 @@
         .metric-label { font-size: 13px; color: var(--yazi-slate); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
 
         /* ==========================================================================
-           5. DUYURULAR MOTORU (KATEGORİ filtreleMELİ & ARANABİLİR)
+           5. DUYURULAR MOTORU
            ========================================================================== */
         .control-panel {
             display: flex; justify-content: space-between; align-items: center;
@@ -172,7 +170,7 @@
         .tag-badge { background: #e0f2fe; color: var(--mavi-dark); padding: 4px 14px; border-radius: 50px; font-size: 11px; font-weight: 800; text-transform: uppercase; display: inline-block; width: fit-content; margin-bottom: 15px; }
 
         /* ==========================================================================
-           6. BULUT DEPOLAMA ALBÜMÜ & SÜPER LIGHTBOX (BÜYÜTEÇ)
+           6. BULUT DEPOLAMA ALBÜMÜ & LIGHTBOX
            ========================================================================== */
         .gallery-wrapper-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
         .gallery-lux-card {
@@ -188,7 +186,6 @@
         }
         .gallery-lux-card:hover .gallery-overlay-meta { opacity: 1; }
 
-        /* DEV LIGHTBOX MODALI */
         #lightboxModal {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.95);
             backdrop-filter: blur(8px); z-index: 10000; display: none; justify-content: center; align-items: center;
@@ -197,7 +194,7 @@
         .lightbox-close { position: absolute; top: 30px; right: 40px; color: var(--pure-white); font-size: 50px; cursor: pointer; }
 
         /* ==========================================================================
-           7. PROJELER VE GELİŞMİŞ İLETİŞİM FORMU (VERİTABANI BAĞLANTILI)
+           7. PROJELER VE GELİŞMİŞ İLETİŞİM FORMU
            ========================================================================== */
         .project-tracker-card {
             background: var(--pure-white); padding: 35px; border-radius: 24px; box-shadow: var(--golge-kurumsal); margin-bottom: 40px;
@@ -210,7 +207,7 @@
         .textarea-luxury:focus { border-color: var(--mavi-primary); box-shadow: 0 0 0 4px rgba(42, 111, 151, 0.15); }
 
         /* ==========================================================================
-           8. MASTER ADMIN FULL CONTROL PANEL MANAGEMENT (CMS)
+           8. MASTER ADMIN CONTROL PANEL MANAGEMENT (CMS)
            ========================================================================== */
         .master-admin-hub {
             background: #0f172a; color: #f8fafc; border-radius: 36px; padding: 50px; margin-top: 60px;
@@ -228,6 +225,10 @@
             border-radius: 8px; color: white; outline: none; font-size: 14px; margin-bottom: 15px;
         }
         .admin-form-dark input:focus, .admin-form-dark select:focus { border-color: var(--altin-regal); }
+        .admin-panel-baslik { font-size: 18px; color: #94a3b8; margin-bottom: 15px; font-weight: 600; border-left: 4px solid var(--altin-regal); padding-left: 10px; }
+        .admin-liste { background: rgba(255, 255, 255, 0.04); padding: 24px; border-radius: 16px; max-height: 380px; overflow-y: auto; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .admin-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .admin-item img { width: 55px; height: 55px; object-fit: cover; border-radius: 8px; }
 
         /* ==========================================================================
            9. AUTHENTICATION POPUP LAYER ENGINE (MODAL)
@@ -235,7 +236,7 @@
         .modal-blur-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(7px); display: flex; justify-content: center; align-items: center;
-            z-index: 10000; opacity: 0; visibility: hidden; transition: var(--animasyon-normal);
+            z-index: 10000; opacity: 0; visibility: hidden; transition: var(--gecis-normal);
         }
         .modal-blur-overlay.active { opacity: 1; visibility: visible; }
         .modal-luxury-window { background: var(--pure-white); padding: 45px; border-radius: 32px; max-width: 460px; width: 100%; position: relative; text-align: center; box-shadow: var(--golge-derin); }
@@ -247,12 +248,17 @@
         @keyframes spinRotate { to { transform: rotate(360deg); } }
         @keyframes heroAnimate { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Structural Layout Configuration */
         section { padding: 90px 24px; max-width: 1400px; margin: 0 auto; }
         .section-title { text-align: center; font-size: 34px; color: var(--yesil-primary); margin-bottom: 50px; font-weight: 800; }
         .section-title::after { content: ''; display: block; width: 65px; height: 5px; background: var(--altin-regal); margin: 12px auto 0; border-radius: 10px; }
         
-        @media (max-width: 992px) { .contact-grid-system { grid-template-columns: 1fr; } .control-panel { flex-direction: column; align-items: stretch; } .search-input { width: 100%; } }
+        .yonetim-container { display: flex; justify-content: center; gap: 30px; }
+        .yonetim-kart { background: var(--pure-white); padding: 40px 30px; border-radius: 24px; text-align: center; box-shadow: var(--golge-kurumsal); max-width: 320px; width: 100%; border-top: 6px solid var(--yesil-secondary); }
+        .profil-avatar { width: 110px; height: 110px; background: #f8fafc; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 50px; border: 4px solid var(--altin-regal); }
+
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 40px 24px; margin-top: 80px; font-size: 14px; border-top: 5px solid var(--altin-regal); }
+        @media (max-width: 992px) { .contact-grid-system { grid-template-columns: 1fr; } .control-panel { flex-direction: column; align-items: stretch; } .search-input { width: 100%; } .metrics-grid-bar { grid-template-columns: repeat(2, 1fr); margin-top: -25px; } }
+        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 20px; text-align: center; } .nav-menu { flex-wrap: wrap; justify-content: center; gap: 15px; } .hero-glass-box h2 { font-size: 28px; } section { padding: 50px 16px; } .metrics-grid-bar { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -295,7 +301,7 @@
     <section class="hero-framework" id="anasayfa">
         <div class="hero-glass-box">
             <h2>Kültür, Dayanışma ve Dijital Gelecek</h2>
-            <p>Tokat Erbaa Akkoç Köyü Sosyal Yardımlaşma, Dayanışma, Kalkındırma ve Kültür Derneği resmi otomasyon platformuna hoş geldiniz. Coğrafi bağlarımızı dijital köprülerle birleştiriyoruz.</p>
+            <p>Tokat Erbaa Akkoç Köyü Sosyal Yardımlaşma, Dayanışma, Kalkındırma ve Kültür Derneği resmi otomasyon platformuna hoş geldiniz. Coğrafi bağlarimizi dijital köprülerle birleştiriyoruz.</p>
         </div>
     </section>
 
@@ -332,8 +338,7 @@
             </ul>
         </div>
 
-        <div class="announcement-container-layout" id="duyuruKonteyner">
-            </div>
+        <div class="announcement-container-layout" id="duyuruKonteyner"></div>
     </section>
 
     <section id="galeri" style="background: var(--pure-white); max-width:100%; width:100%;">
@@ -486,7 +491,7 @@
             </div>
 
             <div id="katmanKayit" class="katman-hizala">
-                <h3 style="color:var(--yesil-primary); margin-bottom:6px; font-weight:800;">Yeni Kayıt Kaydı</h3>
+                <h3 style="color:var(--yesil-primary); margin-bottom:6px; font-weight:800;">Yeni Üye Kaydı</h3>
                 <p style="font-size:12px; color:var(--yazi-slate); margin-bottom:20px;">Resmi üye doğrulama havuzuna dahil olun.</p>
                 <form onsubmit="gercekAksiyonKayit(event)">
                     <div class="form-grup"><label>Adınız Soyadınız</label><input type="text" id="kayitAd" required placeholder="Örn: Ege Mustafa Şimşek"></div>
@@ -507,38 +512,34 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         // ==========================================================================
-        // ⚙️ GÖNDERDİĞİN RESMİ API VE URL BAĞLANTILARI DOĞRUDAN ENTEGRE EDİLDİ
+        // ⚙️ GÖNDERDİĞİN RESMİ GİRİŞ BİLGİLERİ KİLİTSİZ OLARAK BAĞLANDI (SABİT İSİM HATASI DÜZELTİLDİ)
         // ==========================================================================
         const SUPABASE_URL = "https://uzsoyvamyaomudptibud.supabase.co"; 
         const SUPABASE_ANON_KEY = "sb_publishable_4VJ6fPEVjAj3LFhiewyTrA_hbJrh_v1";
         
-        // Supabase Client Nesnesinin Güvenli Kurulumu
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        // Hata veren 'const supabase' çakışması giderilerek 'sbClient' olarak adlandırıldı
+        const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         let girisYapanKullanici = null;
-        let globalDuyurularHafizasi = []; // Filtreleme ve arama için lokal RAM alanı
+        let globalDuyurularHafizasi = [];
 
-        // Sayfa İlk Tetiklendiğinde Çalışacak Çekirdek Kombinasyonlar
         window.onload = async function() {
             try {
-                // Canlı oturumu sorgula
-                const { data: { session }, error } = await supabase.auth.getSession();
+                const { data: { session }, error } = await sbClient.auth.getSession();
                 if (error) throw error;
                 if (session) {
                     girisYapanKullanici = session.user;
                     arayuzElementleriniGuncelle();
                 }
             } catch (e) {
-                console.error("Oturum motoru hatası: ", e.message);
+                console.error("Oturum hatası: ", e.message);
             }
             
-            // Veri listeleme hatlarını ateşle
             canliDuyuruListesiniCek();
             canliBulutGaleriListele();
             canliSayaçMotorunuAtesle();
         };
 
-        // Gelişmiş Dinamik Toast Bildirim Jeneratörü
         function bildirimGoster(mesaj, tip = "success") {
             const masterKonteyner = document.getElementById('toast-master-container');
             const toast = document.createElement('div');
@@ -553,7 +554,6 @@
             }, 4000);
         }
 
-        // Modal Yönetim Merkezi
         function modalAc(tip) {
             document.getElementById('authModal').classList.add('active');
             document.querySelectorAll('.katman-hizala').forEach(k => k.classList.remove('active'));
@@ -562,16 +562,12 @@
         }
         function modalKapat() { document.getElementById('authModal').classList.remove('active'); }
 
-        // Gelişmiş Resim Büyüteç Motoru (Lightbox)
         function lightboxAc(src) {
             const modal = document.getElementById('lightboxModal');
             document.getElementById('lightboxImage').src = src;
             modal.style.display = 'flex';
         }
 
-        // ==========================================================================
-        // 🔥 SUPABASE AUTH: KULLANICI KAYIT MOTORU
-        // ==========================================================================
         async function gercekAksiyonKayit(e) {
             e.preventDefault();
             const ad = document.getElementById('kayitAd').value;
@@ -583,29 +579,25 @@
             btn.innerHTML = `<span class="spinner"></span> Şifreleniyor...`;
 
             try {
-                const { data, error } = await supabase.auth.signUp({
+                const { data, error } = await sbClient.auth.signUp({
                     email: eposta, password: sifre,
                     options: { data: { full_name: ad } }
                 });
                 if (error) throw error;
 
                 if(data.user) {
-                    // Admin görebilsin diye profile kaydet
-                    await supabase.from('profiles').insert([{ id: data.user.id, full_name: ad, email: eposta }]);
+                    await sbClient.from('profiles').insert([{ id: data.user.id, full_name: ad, email: eposta }]);
                 }
 
-                bildirimGoster("Gerçek onay bağlantısı e-postanıza gönderildi!", "success");
+                bildirimGoster("Aktivasyon linki gerçek e-postanıza uçuruldu! Lütfen gelen kutusunu doğrulayın.", "success");
                 modalKapat();
             } catch (err) {
-                bildirimGoster("Kayıt Bloklandı: " + err.message, "error");
-            } finally {
+                bildirimGoster("Kayıt Başarısız: " + err.message, "error");
+            } {
                 btn.disabled = false; btn.innerText = "Kayıt Linkini E-Postaya Ateşle";
             }
         }
 
-        // ==========================================================================
-        // 🔥 SUPABASE AUTH: KULLANICI GİRİŞ MOTORU
-        // ==========================================================================
         async function gercekAksiyonGiris(e) {
             e.preventDefault();
             const eposta = document.getElementById('girisEposta').value;
@@ -616,18 +608,18 @@
             btn.innerHTML = `<span class="spinner"></span> Kontrol Ediliyor...`;
 
             try {
-                const { data, error } = await supabase.auth.signInWithPassword({ email: eposta, password: sifre });
+                const { data, error } = await sbClient.auth.signInWithPassword({ email: eposta, password: sifre });
                 if (error) throw error;
 
                 girisYapanKullanici = data.user;
-                bildirimGoster("Giriş başarılı! Oturum açıldı.", "success");
+                bildirimGoster("Giriş başarılı! Bulut bağlantısı sağlandı.", "success");
                 modalKapat();
                 arayuzElementleriniGuncelle();
                 canliSayaçMotorunuAtesle();
             } catch (err) {
                 bildirimGoster("Giriş Reddedildi: " + err.message, "error");
-            } finally {
-                btn.disabled = false; btn.innerText = "Güvenli Giriş Yap";
+            } {
+                btn.disabled = false; btn.innerText = "Sistem Girişi Yap";
             }
         }
 
@@ -639,7 +631,6 @@
             document.getElementById('kullaniciGirisYazi').innerText = girisYapanKullanici.user_metadata.full_name || "Üye";
             document.getElementById('yukleButonEtiket').style.display = "inline-flex";
 
-            // Sınır Tanımayan Admin Mail Yetkilendirmesi
             if (girisYapanKullanici.email === "mustafasimsek603460@gmail.com") {
                 document.getElementById('adminMenuBtn').style.display = "block";
                 document.getElementById('adminPaneli').style.display = "block";
@@ -648,16 +639,13 @@
         }
 
         async function oturumuKapat() {
-            await supabase.auth.signOut();
-            bildirimGoster("Güvenli çıkış sağlandı.", "warning");
+            await sbClient.auth.signOut();
+            bildirimGoster("Oturum kapatıldı.", "warning");
             setTimeout(() => window.location.reload(), 600);
         }
 
-        // ==========================================================================
-        // ✍️ CANLI DUYURU VERİ TABANI ÇEKME VE FİLTRELEME MOTORU
-        // ==========================================================================
         async function canliDuyuruListesiniCek() {
-            const { data, error } = await supabase.from('announcements').select('*').order('created_at', { ascending: false });
+            const { data } = await sbClient.from('announcements').select('*').order('created_at', { ascending: false });
             if (data) {
                 globalDuyurularHafizasi = data;
                 duyuruEkranaBas(globalDuyurularHafizasi);
@@ -666,14 +654,14 @@
 
         function duyuruEkranaBas(liste) {
             const kutu = document.getElementById('duyuruKonteyner');
-            kutu.innerHTML = liste.length === 0 ? "<p style='color:var(--yazi-slate);'>Aradığınız kriterde duyuru bulunamadı.</p>" : "";
+            kutu.innerHTML = liste.length === 0 ? "<p>Aradığınız kategoride güncel bir ilan mevcut değil.</p>" : "";
             liste.forEach(d => {
                 let dZaman = new Date(d.created_at).toLocaleDateString('tr-TR');
                 kutu.innerHTML += `
                     <div class="announcement-premium-card">
                         <div>
                             <span class="tag-badge">${d.category}</span>
-                            <span style="font-size:12px; color:var(--yazi-slate); display:block; margin-bottom:6px; font-weight:600;">${dZaman}</span>
+                            <span style="font-size:12px; color:var(--yazi-slate); display:block; margin-bottom:8px; font-weight:600;">${dZaman}</span>
                             <h4 style="color:var(--yesil-primary); font-size:18px; margin-bottom:10px; font-weight:700;">${d.title}</h4>
                             <p style="font-size:14px; color:var(--yazi-slate); text-align:justify;">${d.content}</p>
                         </div>
@@ -695,9 +683,6 @@
             duyuruEkranaBas(filtreli);
         }
 
-        // ==========================================================================
-        // 🖼️ STORAGE DISKİNE FOTOĞRAF FIŞKIRTMA MOTORU
-        // ==========================================================================
         async function gercekBulutFotoYukle(event) {
             const file = event.target.files[0]; if (!file) return;
             const etiket = document.getElementById('yukleButonEtiket');
@@ -707,15 +692,12 @@
                 const uzanti = file.name.split('.').pop();
                 const pathName = `${Date.now()}-${Math.random().toString(36).substring(5)}.${uzanti}`;
 
-                // 1. Fiziksel Upload
-                const { error: sErr } = await supabase.storage.from('village-photos').upload(pathName, file);
+                const { error: sErr } = await sbClient.storage.from('village-photos').upload(pathName, file);
                 if (sErr) throw sErr;
 
-                // 2. Link Üretimi
-                const { data: { publicUrl } } = supabase.storage.from('village-photos').getPublicUrl(pathName);
+                const { data: { publicUrl } } = await sbClient.storage.from('village-photos').getPublicUrl(pathName);
 
-                // 3. Veritabanı Kaydı
-                await supabase.from('photos_meta').insert([{
+                await sbClient.from('photos_meta').insert([{
                     storage_path: pathName, url: publicUrl,
                     uploaded_by: girisYapanKullanici.user_metadata.full_name || "Üye"
                 }]);
@@ -724,8 +706,8 @@
                 canliBulutGaleriListele();
                 canliSayaçMotorunuAtesle();
             } catch (err) {
-                bildirimGoster("Yükleme Kesildi: " + err.message, "error");
-            } finally {
+                bildirimGoster("Yükleme Engellendi: " + err.message, "error");
+            } {
                 etiket.innerHTML = `📸 Yeni Fotoğraf Gönder`;
             }
         }
@@ -738,7 +720,7 @@
                     <div class="gallery-overlay-meta"><strong>Akkoç Köyü Genel Görünümü</strong><p style="font-size:12px; opacity:0.8; margin-top:4px;">Sistem Sabit Kapak Fotoğrafı</p></div>
                 </div>`;
 
-            const { data: fotolar } = await supabase.from('photos_meta').select('*').order('created_at', { ascending: false });
+            const { data: fotolar } = await sbClient.from('photos_meta').select('*').order('created_at', { ascending: false });
             if (fotolar) {
                 fotolar.forEach(f => {
                     let div = document.createElement('div');
@@ -750,9 +732,6 @@
             }
         }
 
-        // ==========================================================================
-        // 📩 İLETİŞİM FORMU MOTORU (MESAJ KUTUSUNA VERİ ATAR)
-        // ==========================================================================
         async function iletisimFormuGonder(e) {
             e.preventDefault();
             const sender_name = document.getElementById('ilAd').value;
@@ -763,9 +742,9 @@
 
             btn.disabled = true; btn.innerText = "Kriptolanıyor...";
 
-            const { error } = await supabase.from('contact_messages').insert([{ sender_name, sender_email, subject, message }]);
+            const { error } = await sbClient.from('contact_messages').insert([{ sender_name, sender_email, subject, message }]);
             if (!error) {
-                bildirimGoster("Mesajınız dernek yönetim havuzuna başarıyla düştü!", "success");
+                bildirimGoster("Mesajınız dernek yönetim havuzuna iletildi!", "success");
                 e.target.reset();
             } else {
                 bildirimGoster("Sistem hatası: " + error.message, "error");
@@ -773,9 +752,6 @@
             btn.disabled = false; btn.innerText = "Mesajı Güvenli Hatla İlet";
         }
 
-        // ==========================================================================
-        // 🛡️ CMS PANEL MOTORU (DUYURU EKLEME, SİLME, FOTO İMHA)
-        // ==========================================================================
         function adminTabDegistir(tabId, el) {
             document.querySelectorAll('.admin-tab-link').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.admin-dynamic-window').forEach(w => w.classList.remove('active'));
@@ -788,20 +764,17 @@
             const photoList = document.getElementById('adminPhotoList');
             const boxList = document.getElementById('adminBoxList');
 
-            // Kullanıcıları Çek
-            const { data: p } = await supabase.from('profiles').select('*');
+            const { data: p } = await sbClient.from('profiles').select('*');
             userList.innerHTML = p && p.length > 0 ? "" : "<p>Kayıtlı üye yok.</p>";
             if (p) p.forEach(u => userList.innerHTML += `<div class="admin-item"><span>👤 <strong>${u.full_name}</strong> (${u.email})</span><span style="color:var(--altin-regal); font-weight:700;">ONAYLI</span></div>`);
 
-            // Fotoğrafları Çek
-            const { data: f } = await supabase.from('photos_meta').select('*');
+            const { data: f } = await sbClient.from('photos_meta').select('*');
             photoList.innerHTML = f && f.length > 0 ? "" : "<p>Depoda resim yok.</p>";
             if (f) f.forEach(img => photoList.innerHTML += `<div class="admin-item"><div style="display:flex;align-items:center;gap:15px;"><img src="${img.url}"><span>Yükleyen: ${img.uploaded_by}</span></div><button class="btn-sil" onclick="adminFotoYokEt(${img.id}, '${img.storage_path}')">Disklerden Kazı</button></div>`);
 
-            // Gelen Mesajları Çek
-            const { data: m } = await supabase.from('contact_messages').select('*').order('created_at', { ascending: false });
+            const { data: m } = await sbClient.from('contact_messages').select('*').order('created_at', { ascending: false });
             boxList.innerHTML = m && m.length > 0 ? "" : "<p>Kutu boş.</p>";
-            if (m) m.forEach(msg => boxList.innerHTML += `<div class="admin-item" style="flex-direction:column; align-items:flex-start; gap:6px;"><div style="display:flex; justify-content:between; width:100%;"><strong>Konu: ${msg.subject}</strong><span style="color:var(--altin-regal); font-size:12px;">Gönderen: ${msg.sender_name} (${msg.sender_email})</span></div><p style="color:#cbd5e1; font-size:13px; background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; width:100%;">${msg.message}</p></div>`);
+            if (m) m.forEach(msg => boxList.innerHTML += `<div class="admin-item" style="flex-direction:column; align-items:flex-start; gap:6px;"><div style="display:flex; justify-content:space-between; width:100%;"><strong>Konu: ${msg.subject}</strong><span style="color:var(--altin-regal); font-size:12px;">Gönderen: ${msg.sender_name} (${msg.sender_email})</span></div><p style="color:#cbd5e1; font-size:13px; background:rgba(255,255,255,0.02); padding:10px; border-radius:6px; width:100%;">${msg.message}</p></div>`);
         }
 
         async function adminDuyuruYayinla(e) {
@@ -810,7 +783,7 @@
             const category = document.getElementById('adDuyuruKategori').value;
             const content = document.getElementById('adDuyuruIcerik').value;
 
-            const { error } = await supabase.from('announcements').insert([{ title, category, content }]);
+            const { error } = await sbClient.from('announcements').insert([{ title, category, content }]);
             if (!error) {
                 bildirimGoster("Yeni ilan canlı yayına basıldı!", "success");
                 e.target.reset();
@@ -821,8 +794,8 @@
 
         async function adminFotoYokEt(id, path) {
             if (confirm("Görseli fiziksel sunuculardan kalıcı olarak silmek istiyor musun?")) {
-                await supabase.storage.from('village-photos').remove([path]);
-                await supabase.from('photos_meta').delete().eq('id', id);
+                await sbClient.storage.from('village-photos').remove([path]);
+                await sbClient.from('photos_meta').delete().eq('id', id);
                 bildirimGoster("Görsel imha edildi.", "warning");
                 canliBulutGaleriListele();
                 adminVeriMasasiniYukle();
@@ -830,15 +803,14 @@
             }
         }
 
-        // Canlı Sayaç Motoru
         async function canliSayaçMotorunuAtesle() {
-            const { count: uCount } = await supabase.from('profiles').select('*', { count: 'exact', head: true });
-            const { count: fCount } = await supabase.from('photos_meta').select('*', { count: 'exact', head: true });
-            const { count: dCount } = await supabase.from('announcements').select('*', { count: 'exact', head: true });
+            const { count: uCount } = await sbClient.from('profiles').select('*', { count: 'exact', head: true });
+            const { count: fCount } = await sbClient.from('photos_meta').select('*', { count: 'exact', head: true });
+            const { count: dCount } = await sbClient.from('announcements').select('*', { count: 'exact', head: true });
 
-            if(uCount !== null) document.getElementById('sayac-uye').innerText = uCount;
-            if(fCount !== null) document.getElementById('sayac-foto').innerText = (fCount + 1); // +1 kapak resmi
-            if(dCount !== null) document.getElementById('sayac-duyuru').innerText = dCount;
+            document.getElementById('sayac-uye').innerText = uCount || 0;
+            document.getElementById('sayac-foto').innerText = (fCount || 0) + 1;
+            document.getElementById('sayac-duyuru').innerText = dCount || 0;
         }
     </script>
 </body>
